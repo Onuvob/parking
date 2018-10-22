@@ -1,0 +1,36 @@
+{
+    "locations":
+    [
+ 
+        {
+            "title": "99 Satmasjid Road, Dhaka 1205, Bangladesh",
+            "latitude": 23.746644,
+            "longitude": 90.371635
+        },
+        {
+            "title": "M.R. Memento, Rd No 9A, Dhaka 1205, Bangladesh",
+            "latitude": 23.749272,
+            "longitude": 90.368448
+        },
+        {
+            "title": "Mowla Bari, Mowla Goli, Dhaka 1205, Bangladesh",
+            "latitude": 23.748867,
+            "longitude": 90.366097
+        },
+        {
+            "title": "The Woolworth Building",
+            "latitude": 40.712443,
+            "longitude": -74.008369
+        },
+        {
+            "title": "Foley Square",
+            "latitude": 40.714541,
+            "longitude": -74.003091
+        },
+        {
+            "title": "Sazon",
+            "latitude": 40.715631,
+            "longitude": -74.008498
+        }
+    ]
+}

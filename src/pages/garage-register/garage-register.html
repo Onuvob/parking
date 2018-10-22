@@ -1,0 +1,35 @@
+
+<ion-header>
+	<ion-navbar>
+		<ion-title>Add Garage</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class=background>
+
+	<form [formGroup]="registration">
+		<ion-list>
+			<ion-item>
+				<ion-label floating>Title*</ion-label>
+				<ion-input type="text" [(ngModel)]="garageTitle" formControlName="garageTitle"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label floating>Address*</ion-label>
+				<ion-input type="text" [(ngModel)]="garageAddress" formControlName="garageAddress"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label floating>Hourly rent</ion-label>
+				<ion-input type="number" [(ngModel)]="hourlyRent" formControlName="hourlyRent"></ion-input>
+			</ion-item>
+
+			<ion-col text-center>
+				<div>
+					<button ion-button color="danger" round (click)="garageReg(garageTitle, garageAddress, hourlyRent)" [disabled]="!registration.valid">Add</button>
+				</div>
+			</ion-col>
+		</ion-list>
+	</form>
+
+</ion-content>

@@ -1,0 +1,51 @@
+
+<!-- <div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="../assets/imgs/nasa.svg">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+ -->
+<ion-content class=background>
+
+ <div>
+  <ion-col padding text-center>
+   <h1 ion-text color="danger" >ParKing</h1>	
+ </ion-col>
+</div>
+
+
+
+  <form [formGroup]="login" >
+    <ion-list>
+      <h2 text-center>LOGIN</h2>
+      <ion-item>
+        <ion-label floating>Mobile Number</ion-label>
+        <ion-input type="number" [(ngModel)]="userNumber" formControlName="contact"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="userPassword" formControlName="password"></ion-input>
+      </ion-item>
+      <div text-center>
+        <button ion-button color="danger" round (click)="findUser(userNumber, userPassword)" [disabled]="!login.valid">Sign In</button>
+        <h6 class="addPadding" ion-text color="danger">Forgot your password?</h6>
+      </div>
+    </ion-list>
+  </form>
+  
+  <ion-col text-center>
+
+    <div>
+     <h6 ion-text color="danger">Don't have an account?</h6>
+   </div>
+   <div>
+    <button ion-button color="danger" round (click)="openUregPage()">Get Register</button>
+  </div>
+
+</ion-col>
+
+
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu">My garages</ion-icon>
+		</button>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-card *ngFor = "let list of lists" (click)="openGarage(list)">
+	  <ion-card-header>
+	    {{list.garage_name}}
+	  </ion-card-header>
+	  <ion-card-content>
+	    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+	  </ion-card-content>
+	</ion-card>
+</ion-content>

@@ -1,0 +1,52 @@
+
+<ion-header>
+
+	<ion-navbar>
+		<ion-title>Registration</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class=background>
+
+	<div padding text-center>
+		<div class="image">
+			<img src="../../assets/imgs/no-image.png">
+		</div>
+		<div>
+			<button color="danger" ion-button round>Choose photo</button>
+		</div>
+	</div>
+
+	<form [formGroup]="registration">
+		<ion-list>
+			<ion-item>
+				<ion-label floating>Full name*</ion-label>
+				<ion-input type="text" [(ngModel)]="userName" formControlName="name"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label floating>Password*</ion-label>
+				<ion-input type="password" [(ngModel)]="userPassword" formControlName="password"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label floating>Mobile Number*</ion-label>
+				<ion-input type="number" [(ngModel)]="userNumber" formControlName="contact"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label floating>Address*</ion-label>
+				<ion-input type="text" [(ngModel)]="userAddress" formControlName="address"></ion-input>
+			</ion-item>
+
+			<ion-col text-center>
+				<div>
+					<button ion-button color="danger" round (click)="userReg(userName, userPassword, userNumber, userAddress)" [disabled]="!registration.valid">Register</button>
+				</div>
+			</ion-col>
+		</ion-list>
+	</form>
+
+</ion-content>
